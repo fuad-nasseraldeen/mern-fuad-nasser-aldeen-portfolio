@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+
+    @include respond(tab-land) {
+        // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) {
+        // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+
+
+}
+
+body {
+    font-family: $font-display;
+    color: $color-grey-dark-1;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: [firstPage-start] 100vh [firstPage-end project-start] 100vh [project-end education-start] 18vh [education-end skills-start] 100vh [skills-end] repeat(auto-fit, minmax(100rem, 1fr));
+    grid-template-columns: repeat(8, minmax(6rem, 1fr));
+// @media (max-width: 62rem) {
+//     grid-template-rows: [firstPage-start] 100vh [firstPage-end project-start] 100vh [project-end education-start] 18vh [education-end skills-start] 100vh [skills-end work-start] 110vh [work-end courses-start] 100vh [courses-end] repeat(2, minmax(100rem, 1fr));
+//     }
+    @include respond(phone) {
+        // width < 600?
+        grid-template-rows: [headerMobileMode-start] 100vh [headerMobileMode-end about-start] 30vh [about-end project-start] 100vh [project-end education-start] 30vh [education-end skills-start] 100vh [skills-end] repeat(auto-fit, minmax(100rem, 1fr));
+    }
+}

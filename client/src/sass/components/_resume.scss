@@ -1,0 +1,31 @@
+/* --------- */
+/* Resume */
+/* --------- */
+
+.resume-section {
+    display: flex;
+        justify-content: center;
+    color: $color-white ;
+    width: 94vw;
+    text-align: -webkit-center;
+}
+
+.resume {
+    @include background;
+
+}
+
+.btn {
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    justify-content: center;
+    display: flex;
+    text-decoration: auto;
+    color: $color-white;
+}
+
+.pdf-container {
+    position: relative;
+    overflow: auto;
+    border-radius: 2rem;
+    padding-bottom: 1rem;
+}

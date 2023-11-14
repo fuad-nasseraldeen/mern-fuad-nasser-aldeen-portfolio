@@ -1,0 +1,33 @@
+.or-spacer-vertical {
+    // display: inline-block;
+    // margin-top: 100px;
+    margin-left: 10rem;
+    // width: 100px;
+    // position: relative;
+
+    .mask {
+        overflow: hidden;
+        width: 2.5rem;
+        height: 60vh;
+    }
+
+    &.left .mask:after {
+        content: '';
+        display: block;
+        // margin-left: -20px;
+        width: 2rem;
+        height: 100%;
+        border-radius: 12px / 125px;
+        box-shadow: 0 0 8px $color-blue-primary-6;
+    }
+
+    &.right .mask:before {
+        content: '';
+        display: block;
+        margin-left: 2rem;
+        width: 2rem;
+        height: 100%;
+        border-radius: 12px / 125px;
+        box-shadow: 0 0 8px $color-blue-primary-6;
+    }
+}

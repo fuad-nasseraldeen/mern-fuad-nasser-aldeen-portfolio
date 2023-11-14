@@ -1,0 +1,107 @@
+      .main {
+          display: flex;
+          flex-direction: column;
+          gap: 0.15em;
+          transform: translate(0%, 10%);
+          padding-right: 1rem;
+          width: min-content;
+      }
+
+      .up {
+          display: flex;
+          flex-direction: row;
+          gap: 0.15em;
+      }
+
+      .down {
+          display: flex;
+          flex-direction: row;
+          gap: 0.15em;
+      }
+
+      .card {
+          width: 5rem;
+          height: 5rem;
+          outline: none;
+          border: none;
+          background: $color-white;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          transition: .2s ease-in-out;
+          cursor: pointer;
+
+          &--linkedin {
+              @include border-radius(9rem, .05rem, .05rem, .05rem);
+              @include hover($color-linkedin, '.linkedin-icon');
+
+          }
+
+          &--instagram {
+              @include border-radius(.05rem, 9rem, .05rem, .05rem);
+              @include hover($color-instagram, '.instagram-icon');
+          }
+
+          &--whatsapp {
+              @include border-radius(.05rem, .05rem, 9rem, .05rem);
+              @include hover($color-whatsapp, '.whatsapp-icon');
+          }
+
+          &--github {
+              @include border-radius(.05rem, .05rem, .05rem, 9rem);
+              @include hover($color-github, '.github-icon');
+          }
+      }
+
+      .linkedin-icon {
+          margin-top: 1.2em;
+          margin-left: 1.2em;
+          fill: $color-linkedin;
+          width: 2.8rem;
+          height: 2.8rem;
+      }
+
+      .gmail-icon {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          width: 3.5rem;
+          height: 3.5rem;
+
+          &:hover {
+              outline: none;
+              animation: pulsate 1s infinite;
+          }
+
+          &:focus {
+              outline: none;
+              animation: pulsate 1s infinite;
+          }
+      }
+
+      .whatsapp-icon {
+          margin-left: -1rem;
+          fill: $color-whatsapp;
+          width: 2.5rem;
+          height: 2.5rem;
+      }
+
+      .github-icon {
+          margin-left: 1rem;
+          fill: $color-github;
+          width: 2.5rem;
+          height: 2.5rem;
+      }
+
+      .instagram-icon {
+          margin-top: 1.5rem;
+          margin-left: -1rem;
+          fill: $color-instagram;
+          width: 3.5rem;
+          height: 3.5rem;
+      }
+
+
+      .card4:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          background-color: #8c9eff;
+      }

@@ -1,0 +1,33 @@
+@import "abstracts/_functions.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
+
+@import "base/_animations.scss";
+@import "base/_base.scss";
+@import "base/_typography.scss";
+@import "base/_utilities.scss";
+
+@import "components/_bg-video.scss";
+@import "components/_button.scss";
+@import "components/_recommendetion.scss";
+@import "components/_hackathon.scss";
+@import "components/_projects.scss";
+@import "components/_work.scss";
+@import "components/_skills.scss";
+@import "components/_about.scss";
+@import "components/_education.scss";
+@import "components/_courses.scss";
+@import "components/_firstPage.scss";
+@import "components/_resume.scss";
+
+@import "layout/_vartical-separator.scss";
+@import "layout/_footer.scss";
+@import "layout/_grid.scss";
+@import "layout/_header.scss";
+@import "layout/_headerMobileMode.scss";
+@import "layout/_scrollDownArrow.scss";
+@import "layout/_reveal.scss";
+@import "layout/_carousel.scss";
+@import "layout/_card.scss";
+@import "layout/_socialMedia.scss";
+@import "layout/_scrollToTop.scss";

@@ -1,0 +1,83 @@
+@import '../abstracts/_variables.scss';
+
+.project {
+    @include background;
+
+    .card__container {
+
+
+        .project__card {
+            height: 80vh;
+            border-radius: 2rem;
+            background: rgba($color-white, .9);
+            box-shadow: 2px 2px 20px #dadada,
+                2px 2px 20px #f6f6f6;
+            transition: all .8s ease;
+            transform: scale(.9);
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                outline: .5rem solid $color-blue-primary-5;
+                transform: scale(.95) translateY(-.5rem) translateZ(0);
+                box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+                background: #e8e8e8;
+            }
+
+            &:active {
+                transform: scale(0.85) rotateZ(1.7deg);
+            }
+
+            &--header {
+                @include respond(phone) {
+                    height: min-content;
+                }
+
+                .item-img {
+                    padding: 1.5rem;
+                    border-radius: 30px;
+                    width: 100%;
+                }
+            }
+
+            &--title {
+                display: flex;
+                align-items: self-end;
+                justify-content: center;
+                padding: 0rem 1rem;
+
+                @include respond(phone) {
+                    margin-top: -1rem;
+                    align-items: self-start;
+                }
+            }
+
+            &--description {
+                display: flex;
+                align-items: self-start;
+                justify-content: center;
+                padding: 0rem 1.5rem;
+
+                @include respond(phone) {
+                    padding: 0rem 1.5rem;
+                    align-items: center;
+                }
+            }
+
+            &--tech-stack {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: self-end;
+            }
+
+            &--footer {
+                display: flex;
+                align-self: flex-end;
+                align-items: center;
+                // height: 15vh;
+                border-radius: 5rem 5rem 0 0;
+            }
+        }
+    }
+}

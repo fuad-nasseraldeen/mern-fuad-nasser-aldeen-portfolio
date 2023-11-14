@@ -1,0 +1,79 @@
+.project,
+.recommendations {
+
+    .card__container {
+        overflow: hidden;
+
+        .owl-carousel .owl-stage,
+        .owl-carousel.owl-drag .owl-item {
+            -ms-touch-action: auto;
+            touch-action: auto;
+        }
+
+        .owl-carousel .owl-nav.disabled,
+        .owl-carousel .owl-dots.disabled {
+            display: block;
+        }
+
+        .owl-carousel .owl-next {
+            width: 5rem;
+            height: 5rem;
+            line-height: 5rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 42%;
+            right: -1%;
+            font-size: 2rem;
+            color: rgba($color-white, .7);
+            border: 1px solid rgba($color-white, .7);
+            background-color: $color-blue-primary-6;
+            text-align: center;
+
+            @include respond(phone) {
+                right: 1%;
+            }
+        }
+
+        .owl-carousel .owl-prev {
+            width: 5rem;
+            height: 5rem;
+            line-height: 5rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 42%;
+            left: -1%;
+            font-size: 2rem;
+            color: rgba($color-white, .7);
+            border: 1px solid rgba($color-white, .7);
+            background-color: $color-blue-primary-6;
+            text-align: center;
+
+            @include respond(phone) {
+                left: 1%;
+            }
+        }
+
+        .owl-dots {
+            text-align: center;
+            padding-bottom: 2rem;
+            // background: rgba($color-blue-primary-1, .4)!important;
+        }
+
+        .owl-dots button.owl-dot {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: inline-block;
+            background: rgba($color-white, .7) !important;
+            margin: 0 3px;
+        }
+
+        .owl-dots button.owl-dot.active {
+            background-color: $color-blue-primary-5 !important;
+        }
+
+        .owl-dots button.owl-dot:focus {
+            outline: none;
+        }
+    }
+}

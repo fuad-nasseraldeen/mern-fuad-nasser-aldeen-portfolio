@@ -1,0 +1,108 @@
+/* ---------------------------------------------------
+-------------------Courses----------------------------
+------------------------------------------------------ */
+.courses {
+    width: 100%;
+    // background-color: rgba($color-blue-primary-2, 0.1);
+    // background: radial-gradient(ellipse at top left, rgba(31, 70, 145, 0.1), #1b3a79 20%, transparent 20%), linear-gradient(to top, rgba(31, 70, 145, 0.1), rgba(31, 70, 145, 0.4));
+@include background;
+
+
+    &__container {
+        &-body {
+            // @include transform(0%, 20%);
+        }
+
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: row;
+            min-height: 30vh;
+            align-content: center;
+            .wrapper,
+            .single-card {
+                /* height:  450px; */
+                // max-width: 340px;
+                margin: 0.5rem;
+                position: relative;
+            }
+
+            .wrapper {
+                perspective: 90rem;
+            }
+
+            .single-card {
+                text-align: center;
+                transition: all 1.5s cubic-bezier(0.7, -.5, 0.3, 1.8);
+                transform-style: preserve-3d;
+            }
+
+            .wrapper:hover .single-card {
+                transform: rotateY(180deg);
+            }
+
+            .front,
+            .back {
+                /* width: 250px; */
+                position: relative;
+                top: 0;
+                left: 0;
+                backface-visibility: hidden;
+            }
+
+            .curser-pointer {
+                cursor: pointer;
+            }
+
+            .front {
+                cursor: pointer;
+                height: 100%;
+                margin-top: 1rem;
+                /* background-image: url(../images/my-office.jpeg); */
+                backface-visibility: hidden;
+                border-radius: 50px;
+                background-size: cover;
+                background-position: center center;
+
+                .item-img {
+                    max-width: 100%;
+                    height: 25rem;
+                    border-radius: 5%;
+                }
+            }
+
+            .back {
+                max-width: 34rem;
+                transform: rotateY(180deg);
+                position: absolute;
+                border-radius: 5%;
+                height: 25rem;
+                background: rgba($color-blue-primary-6, .7);
+                display: flex;
+                padding: 2rem;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    &-skills {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.white-divider {
+    width: 100%;
+    height: 0.1px;
+    background-color: #cdcdcd;
+}

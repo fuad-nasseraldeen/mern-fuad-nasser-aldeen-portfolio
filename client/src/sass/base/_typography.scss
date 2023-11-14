@@ -1,0 +1,108 @@
+%fix-line {
+    padding-left: 3.5rem;
+
+    @include respond(tab-port) {
+        // width < 1200?
+        padding-left: .5rem;
+    }
+}
+
+.header {
+    font-size: 2.6rem;
+    font-family: inherit;
+}
+
+.heading-title {
+    font-weight: 400;
+    @include tamplate(4.5rem, inherit, 1.1, $color-grey-light-1);
+}
+
+.sub-heading-gray {
+    font-weight: 200;
+    @include tamplate(2.1rem, inherit, 1.1, $color-secondary-grey);
+}
+.sub-heading-white {
+    font-weight: 400;
+    @include tamplate(2.1rem, inherit, 1.1, $color-grey-light-1);
+}
+.heading-body-gray {
+    @include tamplate(1.8rem, inherit, 1.4, $color-secondary-grey);
+}
+
+.heading-body-white {
+    font-weight: 200;
+    @include tamplate(1.8rem, inherit, 1.4, $color-grey-light-1);
+}
+
+.work-title {
+    text-transform: capitalize;
+    font-weight: 400;
+    @include tamplate(2.5rem, inherit, 1.4, $color-grey-light-2);
+    @include transform(0%, 2%);
+    display: flex;
+    justify-self: center;
+}
+
+.heading-sub-title {
+    @include tamplate(1.5rem, $font-display, 1.4, $color-grey-light-2);
+}
+
+.about-body-font {
+    text-transform: capitalize;
+    @include tamplate(1.8rem, inherit, 1.3, $color-secondary-grey);
+}
+
+.heading-recommendation {
+    font-weight: 600;
+    @include tamplate(1.5rem, inherit, 2.8rem, $color-blue-primary-6);
+}
+
+.project {
+    .card__container {
+        padding: 0 5rem;
+        // @include transform(0%, 2%);
+        font-weight: 200;
+        @include tamplate(2.1rem, inherit, 1.4, $color-secondary-grey);
+                    @include respond(phone) {
+                            padding: 0;
+                        }
+        .project__card {
+            text-align: center;
+
+            &--title {
+                letter-spacing: .5rem;
+                @include tamplate(2.8rem, inherit, 1.2, $color-secondary-grey);
+                font-weight: 600;
+                // @include tamplate(3rem, $font-display-5, 1.1, $color-blue-primary-6);
+
+            }
+            &--description {
+                @include transform(0%, 15%);
+            }
+            &--footer {
+                @include transform(0%, -45%);
+
+                // background-size: cover;
+                // background-image: url('../../../public/SVG/footer.svg');
+                .github {
+                    justify-self: self-start;
+                    padding-left: 2.5rem;
+                }
+
+                .live-demo {
+                    justify-self: self-end;
+                    padding-right: 1.5rem;
+                }
+
+
+            }
+        }
+    }
+}
+
+.line {
+    width: 30rem;
+    height: .1rem;
+    background-color: #FB8C00;
+    margin: 1rem;
+}

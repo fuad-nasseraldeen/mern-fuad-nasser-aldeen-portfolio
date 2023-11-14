@@ -1,0 +1,39 @@
+@import '../abstracts/_variables.scss';
+
+.education {
+    background: linear-gradient(rgba($color-blue-primary-2, 1), rgba($color-blue-primary-2, .9), rgba($color-blue-primary-2, 1));
+    grid-auto-flow: column;
+
+    @include respond(tab-port) {
+        // width < 900?
+        grid-auto-flow: row;
+    }
+
+    &__header {
+        width: max-content;
+    }
+
+    &__container {
+        justify-self: center;
+        align-self: center;
+
+        &__body {
+            width: 100%;
+            height: 10rem;
+            letter-spacing: 3px;
+            @include transform(0%, 30%);
+
+            &__shape {
+                // height: 13rem;
+                // width: 21rem;
+                // background: linear-gradient(#407F7F,
+                //         #0c5858);
+                // border-radius: 50%;
+                // position: absolute;
+                // bottom: .5rem;
+                // left: 1.7rem;
+                // z-index: -1;
+            }
+        }
+    }
+}
