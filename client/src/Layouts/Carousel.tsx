@@ -12,11 +12,8 @@ export interface Props {
     slide?: number
 }
 
-export interface State {
 
-}
-
-export class Carousel extends React.Component<Props, State> {
+export class Carousel extends React.Component<Props, object> {
 
     // Owl Carousel Settings
     options = {

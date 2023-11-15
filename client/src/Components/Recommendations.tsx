@@ -5,10 +5,6 @@ import _ from 'lodash';
 
 import Carousel from '../Layouts/Carousel'
 
-export interface State {
-}
-export interface Props {
-}
 const Recommendations: React.FC = () => { // function component
     const profile: Profile = useSelector((state: RootState) => state.profile);
     const { recommendationsData, socialLinks } = profile;
