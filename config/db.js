@@ -7,11 +7,17 @@ const db = config.get('mongoURI') // to get that value - the whole string that w
 //so will use async way with try catch
 const connectDB = async () => {
   try {
-      await mongoose.connect(db) // because mongoose.connect(db)  return a promise we write await before
-    console.log('MongoDB Connected')
+    await mongoose.connect(db, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }) // because mongoose.connect(db)  return a promise we write await before
+    console.log(
+      `MongoDB Connected: ${mongoose.connection.host}:${mongoose.connection.port}, Version ${mongoose.version}`,
+    )
+
   } catch (err) {
-      //Exit process with failure
-      console.error(err.message)
+    //Exit process with failure
+    console.error(`Error connecting to MongoDB: ${err.message}`)
     process.exit(1)
   }
 }
