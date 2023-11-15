@@ -44,7 +44,7 @@ export const getProfile = async (dispatch: any) => {
 export const settProfileToDB = async (dispatch: any) => {
 
     try {
-        const res = await axios.post('/api/profile/');
+        const res = await axios.post('/api/profile');
         if (res) {
             dispatch(setProfileData(res.data));
         }

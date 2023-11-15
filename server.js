@@ -1,7 +1,6 @@
 const express = require('express')
 const connectDB = require('./config/db') // call db file
 const path = require('path')
-const cors = require('cors')
 
 const app = express()
 
@@ -11,8 +10,18 @@ connectDB()
 // Enable CORS for all routes
 app.use(cors())
 
+// Example CORS headers
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://mern-stack-portfolio-site-01714068399c.herokuapp.com')
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE')
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+  next()
+})
+
 // Init Middleware
 app.use(express.json({ extended: false }))
+
+// app.get('/', (req, res) => res.send('API Running'))
 
 // Define Routes
 app.use('/api/profile', require('./routes/api/profile'))
