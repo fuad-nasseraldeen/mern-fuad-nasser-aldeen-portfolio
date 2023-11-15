@@ -18,7 +18,7 @@ router.get('/me', async (req, res) => {
     res.json(profile) // Send the profile as JSON response
   } catch (error) {
     console.error(error)
-    res.status(500).send('Server Error')
+    res.status(500).json({ error: 'Server Error', details: error.message }) // Send detailed error message during development
   }
 })
 
@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
     res.json(profile)
   } catch (error) {
     console.error(error)
-    res.status(500).send('Server error')
+    res.status(500).json({ error: 'Server Error', details: error.message }) // Send detailed error message during development
   }
 })
 
