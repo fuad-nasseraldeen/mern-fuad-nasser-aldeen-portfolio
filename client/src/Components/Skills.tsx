@@ -19,7 +19,7 @@ const SkillsSet: React.FC = () => {
 
   const displayTechnicalSkillsContainer = () => {
     const tabHeaders = skillsCategory
-    const tabContents = Object.values(skills!)
+    const tabContents = skills && Object.values(skills)
     return (
 
       <div className='tabs'>

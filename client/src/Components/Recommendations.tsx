@@ -18,7 +18,7 @@ const Recommendations: React.FC = () => { // function component
         const linkedin = socialLinks?.find(social => social.name === 'linkedin')?.url;
         return (
             <Carousel slide={1}>
-                {recommendations!.map((item, index) => (
+                {recommendations && recommendations.map((item, index) => (
                     <div className="recommendations__container"
 
                         key={index}>
