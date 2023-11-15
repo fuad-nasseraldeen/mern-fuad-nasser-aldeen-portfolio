@@ -1,15 +1,18 @@
 const express = require('express')
 const connectDB = require('./config/db') // call db file
 const path = require('path')
+const cors = require('cors')
 
 const app = express()
+
 // Connect DB
 connectDB()
 
+// Enable CORS for all routes
+app.use(cors())
+
 // Init Middleware
 app.use(express.json({ extended: false }))
-
-// app.get('/', (req, res) => res.send('API Running'))
 
 // Define Routes
 app.use('/api/profile', require('./routes/api/profile'))
