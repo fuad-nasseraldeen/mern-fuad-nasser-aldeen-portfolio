@@ -2,7 +2,7 @@
   "name": "mernportfolio",
   "version": "1.0.0",
   "description": "mern stack portfolio website",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start-for-production": "SET \"NODE_ENV=production\" && node server",
     "start": "node server",
