@@ -17,8 +17,10 @@ export const getProfile = async (dispatch: any) => {
 
     try {
         const res = await axios.get('/api/profile/me');
-        if (res) {
+        if (res && res instanceof Object) {
             dispatch(setProfileData(res.data));
+        } else {
+            settProfileToDB(dispatch)
         }
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
