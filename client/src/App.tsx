@@ -36,8 +36,8 @@ const App = () => {
       <div className='container'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/header' element={<FirstPage />} />
           <Route path='/headerMobileMode' element={<HeaderMobileMode />} />
+          <Route path='/header' element={<FirstPage />} />
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/education' element={<Education />} />
