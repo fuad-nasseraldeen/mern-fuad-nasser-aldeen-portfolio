@@ -4,7 +4,7 @@
   "description": "mern stack portfolio website",
   "main": "index.js",
   "scripts": {
-    "start-for-production": "SET \"NODE_ENV=production\" && node server",
+    "start-for-production": "SET \"NODE_ENV=production\" && node index",
     "start": "node index",
     "server": "nodemon index",
     "client": "npm start --prefix ../client",
