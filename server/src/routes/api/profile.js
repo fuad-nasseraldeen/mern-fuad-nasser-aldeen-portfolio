@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Profile = require('../../models/profile')
 
-const resumeData = require('../../../resumeData.js')
+const resumeData = require('../../resumeData.js')
 
 // @route   GET api/profile/me
 // @desc    Get current user profile
