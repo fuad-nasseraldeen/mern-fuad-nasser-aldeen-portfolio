@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-for-production": "SET \"NODE_ENV=production\" && node server",
-    "start": "node server",
-    "server": "nodemon server",
+    "start": "node index",
+    "server": "nodemon index",
     "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
