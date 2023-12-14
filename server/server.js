@@ -25,7 +25,7 @@ app.use(express.json({ extended: false }))
 // app.get('/', (req, res) => res.send('API Running'))
 
 // Define Routes
-app.use('/api/profile', require('./routes/api/profile'))
+app.use('/api/profile', require('./src/routes/api/profile'))
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {

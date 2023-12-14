@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Profile = require('../../models/profile')
 
-const resumeData = require('../../resumeData.js')
+const resumeData = require('../../../resumeData.js')
 
 // @route   GET api/profile/me
 // @desc    Get current user profile
@@ -21,7 +21,6 @@ router.get('/me', async (req, res) => {
     res.status(500).json({ error: 'Server Error', details: error.message }) // Send detailed error message during development
   }
 })
-
 
 // @route   POST api/profile/me
 // @desc    Create or Update a user profile
