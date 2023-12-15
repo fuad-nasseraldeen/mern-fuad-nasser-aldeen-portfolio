@@ -1,13 +1,7 @@
 const mongoose = require('mongoose') // we use it to connect
 const config = require('config') // will grape that in string inside the config package
-// const db = config.get('mongoURI') // to get that value - the whole string that we copy in default.json
+const db = config.get('mongoURI') // to get that value - the whole string that we copy in default.json
 
-let db
-if (process.env.NODE_ENV === 'production') {
-  db = config.get('mongoURI')
-} else {
-  db = config.get('mongoURI_dev') // Use a separate URI for development
-}
 
 // to connect to mongoDB we can just use mongoose.connect(db) and will give us a promise ,
 //but will use async and await - this is the standard and much cleaner and your code look asyncronise
