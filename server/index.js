@@ -9,7 +9,15 @@ const app = express()
 connectDB()
 
 // Enable CORS for all routes
+const cors = require('cors')
+// Allow all origins
 app.use(cors())
+// Allow specific origin(s)
+app.use(
+  cors({
+    origin: 'https://mern-fuad-nasser-aldeen-portfolio-api.vercel.app',
+  }),
+)
 
 // Init Middleware
 app.use(express.json({ extended: false }))
