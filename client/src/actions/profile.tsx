@@ -16,7 +16,7 @@ export const setProfileData = (data: []) => {
 export const getProfile = async (dispatch: any) => {
 
     try {
-        const res = await axios.get('https://mern-fuad-nasser-aldeen-portfolio-api.vercel.app/profile/me')
+        const res = await axios.get('/api/profile/me')
         if (res && res.data instanceof Object) {
             dispatch(setProfileData(res.data))
         } else {
@@ -46,7 +46,7 @@ export const getProfile = async (dispatch: any) => {
 export const settProfileToDB = async (dispatch: any) => {
 
     try {
-        const res = await axios.post('https://mern-fuad-nasser-aldeen-portfolio-api.vercel.app/profile');
+        const res = await axios.post('/api/profile');
         if (res) {
             dispatch(setProfileData(res.data));
         }
