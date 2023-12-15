@@ -11,7 +11,6 @@ connectDB()
 // Enable CORS for all routes
 app.use(cors())
 
-
 // Init Middleware
 app.use(express.json({ extended: false }))
 
@@ -31,5 +30,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 5000
-
 app.listen(PORT, () => console.log(`Server start on port ${PORT}`))

@@ -17,7 +17,7 @@ export const getProfile = async (dispatch: any) => {
 
     try {
         const res = await axios.get('/api/profile/me')
-        if (res && res instanceof Object) {
+        if (res && res.data instanceof Object) {
             dispatch(setProfileData(res.data))
         } else {
             settProfileToDB(dispatch)
